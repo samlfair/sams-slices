@@ -1,0 +1,65 @@
+[
+  {
+    "id": "default-slice",
+    "name": "Default slice",
+    "docURL": "...",
+    "version": "sktwi1xtmkfgx8626",
+    "description": "ImageRow",
+    "primary": {
+      "caption": [
+        {
+          "type": "paragraph",
+          "text": "Lorem dolor ex duis Lorem ex laborum eiusmod ex nulla. In velit eu ex cillum nostrud irure anim ad Lorem qui elit consequat Lorem irure proident.",
+          "spans": []
+        }
+      ]
+    },
+    "items": [
+      {
+        "image": {
+          "dimensions": {
+            "width": 900,
+            "height": 500
+          },
+          "alt": "Placeholder image",
+          "copyright": null,
+          "url": "https://images.unsplash.com/photo-1600804931749-2da4ce26c869?w=900&h=500&fit=crop"
+        }
+      },
+      {
+        "image": {
+          "dimensions": {
+            "width": 900,
+            "height": 500
+          },
+          "alt": "Placeholder image",
+          "copyright": null,
+          "url": "https://images.unsplash.com/photo-1576662712957-9c79ae1280f8?w=900&h=500&fit=crop"
+        }
+      },
+      {
+        "image": {
+          "dimensions": {
+            "width": 900,
+            "height": 500
+          },
+          "alt": "Placeholder image",
+          "copyright": null,
+          "url": "https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?w=900&h=500&fit=crop"
+        }
+      },
+      {
+        "image": {
+          "dimensions": {
+            "width": 900,
+            "height": 500
+          },
+          "alt": "Placeholder image",
+          "copyright": null,
+          "url": "https://images.unsplash.com/photo-1537498425277-c283d32ef9db?w=900&h=500&fit=crop"
+        }
+      }
+    ],
+    "slice_type": "image_row"
+  }
+]

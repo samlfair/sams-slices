@@ -1,0 +1,26 @@
+{
+  "id": "post_feed",
+  "type": "SharedSlice",
+  "name": "PostFeed",
+  "description": "PostFeed",
+  "variations": [
+    {
+      "id": "default-slice",
+      "name": "Default slice",
+      "docURL": "...",
+      "version": "sktwi1xtmkfgx8626",
+      "description": "PostFeed",
+      "primary": {
+        "customTypeId": {
+          "type": "Text",
+          "config": {
+            "label": "",
+            "id": "customTypeId",
+            "placeholder": ""
+          }
+        }
+      },
+      "items": {}
+    }
+  ]
+}

@@ -1,0 +1,38 @@
+{
+  "name": "slice-library-starter-nuxt",
+  "version": "0.0.0",
+  "description": "An awesome Slice Library made with Nuxt.js",
+  "author": "<author>",
+  "license": "MIT",
+  "main": "slices/index.js",
+  "scripts": {
+    "dev": "nuxt",
+    "nuxt:build": "nuxt build",
+    "build": "nuxt generate",
+    "start": "nuxt start",
+    "generate": "nuxt generate",
+    "prepublishOnly": "node ./node_modules/sm-commons/scripts/bundle",
+    "prismic": "prismic",
+    "slicemachine": "start-slicemachine --port 9999",
+    "storybook": "nuxt storybook",
+    "build-storybook": "nuxt storybook build"
+  },
+  "dependencies": {
+    "@nuxtjs/prismic": "^1.2.4",
+    "@prismicio/vue": "^2.0.7",
+    "core-js": "^3.8.3",
+    "nuxt": "^2.14.12",
+    "nuxt-sm": "^0.0.6",
+    "vue-slicezone": "^0.0.29"
+  },
+  "devDependencies": {
+    "@nuxtjs/storybook": "^3.3.1",
+    "babel-loader": "^8.2.2",
+    "prismic-cli": "3.8.7",
+    "sass": "^1.32.8",
+    "sass-loader": "^10.1.1",
+    "shx": "^0.3.3",
+    "slice-machine-ui": "^0.0.44-alpha.6",
+    "sm-commons": "^0.0.23"
+  }
+}
