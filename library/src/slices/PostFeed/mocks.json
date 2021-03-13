@@ -1,0 +1,14 @@
+[
+  {
+    "id": "default-slice",
+    "name": "Default slice",
+    "docURL": "...",
+    "version": "sktwi1xtmkfgx8626",
+    "description": "PostFeed",
+    "primary": {
+      "customTypeId": "reintermediate clicks-and-mortar interfaces"
+    },
+    "items": [],
+    "slice_type": "post_feed"
+  }
+]

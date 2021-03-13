@@ -1,0 +1,10 @@
+{
+  "libraryName": "Sam's Slices",
+  "framework": "nuxt",
+  "gitUrl": "//github.com/samlfair/sams-slices",
+  "pathToLibrary": "library/src",
+  "dependencies": [],
+  "css": [],
+  "script": [],
+  "devDependencies": []
+}

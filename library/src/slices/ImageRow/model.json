@@ -1,0 +1,36 @@
+{
+  "id": "image_row",
+  "type": "SharedSlice",
+  "name": "ImageRow",
+  "description": "ImageRow",
+  "variations": [
+    {
+      "id": "default-slice",
+      "name": "Default slice",
+      "docURL": "...",
+      "version": "sktwi1xtmkfgx8626",
+      "description": "ImageRow",
+      "primary": {
+        "caption": {
+          "config": {
+            "label": "Caption",
+            "placeholder": "Lorem ipsum...",
+            "allowTargetBlank": true,
+            "multi": "paragraph,strong,em,hyperlink"
+          },
+          "type": "StructuredText"
+        }
+      },
+      "items": {
+        "image": {
+          "config": {
+            "label": "Image",
+            "constraint": {},
+            "thumbnails": []
+          },
+          "type": "Image"
+        }
+      }
+    }
+  ]
+}
