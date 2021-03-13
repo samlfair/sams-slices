@@ -49,7 +49,7 @@
     "prismic-dom": "^2.1.0",
     "prismic-javascript": "^2.1.5",
     "sass-loader": "^8.0.2",
-    "sm-commons": "^0.0.23",
+    "sm-commons": "0.0.23",
     "vue": "^2.6.11",
     "vue-hot-reload-api": "^2.3.4",
     "vue-loader": "^15.9.2",

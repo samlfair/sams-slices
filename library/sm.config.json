@@ -2,7 +2,7 @@
   "libraryName": "Sam's Slices",
   "framework": "nuxt",
   "gitUrl": "//github.com/samlfair/sams-slices",
-  "pathToLibrary": "library/src",
+  "pathToLibrary": "src",
   "dependencies": [],
   "css": [],
   "script": [],
