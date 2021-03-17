@@ -2,5 +2,34 @@
   "EmbedBlock": {},
   "ImageRow": {},
   "PostFeed": {},
-  "TextBlock": {}
+  "TextBlock": {},
+  "SquigglyLine": {
+    "primary": {
+      "topSpace": {
+        "content": 40
+      },
+      "size": {
+        "content": 60
+      },
+      "thickness": {
+        "content": 6
+      },
+      "bottomSpace": {
+        "content": 40
+      },
+      "squiggliness": {
+        "content": 20
+      }
+    }
+  },
+  "GraphicGrid": {
+    "primary": {
+      "display": {
+        "content": "masonry"
+      },
+      "gap": {
+        "content": 4
+      }
+    }
+  }
 }
