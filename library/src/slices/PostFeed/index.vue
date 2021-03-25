@@ -34,7 +34,9 @@ export default {
     const { customTypeId } = this.slice.primary;
     const queryParam =
       customTypeId &&
-      this.$prismic.predicates.at("document.type", customTypeId);
+      this.$prismic.predicates.at("document.type", customTypeId, {
+        orderings: "[document.first_publication_date desc]"
+      });
     const response = await this.$prismic.api.query(queryParam);
     // Guard against feedback loops
     this.posts = response.results.filter(post => {

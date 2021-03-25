@@ -1,6 +1,9 @@
 <template>
   <!-- <prismic-embed :field="slice.primary.link" /> -->
-  <div v-html="htmlWithoutDimensions" :style="aspectRatioStyle"></div>
+  <div
+    v-html="htmlWithoutDimensions || slice.primary.link.html"
+    :style="htmlWithoutDimensions && aspectRatioStyle"
+  ></div>
 </template>
 
 <script>
@@ -26,12 +29,14 @@ export default {
       const { html } = this.slice.primary.link;
       const widthRegex = /width="(...)"/;
       const heightRegex = /height="(...)"/;
-      const width = html.match(widthRegex)[1];
-      const height = html.match(heightRegex)[1];
-      this.setAspectRatio(width, height);
-      const withoutWidth = html.replace(widthRegex, ``);
-      const withoutHeight = withoutWidth.replace(heightRegex, "");
-      this.htmlWithoutDimensions = withoutHeight;
+      const width = html.match(widthRegex)?.[1];
+      const height = html.match(heightRegex)?.[1];
+      if (width && height) {
+        this.setAspectRatio(width, height);
+        const withoutWidth = html.replace(widthRegex, ``);
+        const withoutHeight = withoutWidth.replace(heightRegex, "");
+        this.htmlWithoutDimensions = withoutHeight;
+      }
     },
     setAspectRatio(width, height) {
       this.aspectRatioStyle = { aspectRatio: width / height };
