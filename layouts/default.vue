@@ -36,6 +36,11 @@
       border: 1px solid black;
       padding: 1em 1em 0;
       margin: 1em 0;
+      .date {
+        font-size: 0.9rem;
+        color: rgba(0, 0, 0, 0.5);
+        line-height: 2rem;
+      }
     }
   }
   .slice-text-block {

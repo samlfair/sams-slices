@@ -1,9 +1,14 @@
 <template>
   <div class="slice-post-feed">
     <div v-if="posts.length > 0">
-      <div class="post" v-for="post in posts" :key="post.id">
+      <article class="post" v-for="post in posts" :key="post.id">
+        <time
+          class="date"
+          :datetime="formatDatetime(post.first_publication_date)"
+          >{{ formatDate(post.first_publication_date) }}</time
+        >
         <slice-zone :type="post.type" :uid="post.uid" />
-      </div>
+      </article>
     </div>
   </div>
 </template>
@@ -44,6 +49,20 @@ export default {
         return slice.slice_type === "post_feed";
       });
     });
+  },
+  methods: {
+    formatDate: function(date) {
+      const dateObject = this.$prismic.asDate(date);
+      return dateObject.toLocaleDateString("en-US", {
+        month: "long",
+        day: "numeric",
+        year: "numeric"
+      });
+    },
+    formatDatetime: function(date) {
+      const dateObject = this.$prismic.asDate(date);
+      return dateObject.toISOString();
+    }
   }
 };
 </script>
