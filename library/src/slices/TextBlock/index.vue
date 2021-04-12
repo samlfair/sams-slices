@@ -29,7 +29,7 @@ export default {
                 const regex = /(http:\/\/)?(https:\/\/)?(www)?/i;
                 let anchor = match.replace(regex, "");
                 if (anchor.length > 19) anchor = anchor.slice(0, 19);
-                return `<a href="${match}">${anchor}...</a>`;
+                return `<a href="${match}" target="_blank">${anchor}...</a>`;
               }
             );
             return urlsReplaced;
