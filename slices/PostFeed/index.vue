@@ -3,7 +3,7 @@
     <div v-if="posts.length > 0">
       <article class="post" v-for="post in posts" :key="post.id">
         <div v-if="config.linkDates">
-          <NuxtLink :to="post.url">
+          <NuxtLink :to="post.url || '/'">
             <time
               v-if="config.showDates"
               class="date"
