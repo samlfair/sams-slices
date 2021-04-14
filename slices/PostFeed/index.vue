@@ -2,12 +2,22 @@
   <div class="slice-post-feed">
     <div v-if="posts.length > 0">
       <article class="post" v-for="post in posts" :key="post.id">
-        <time
-          class="date"
-          :datetime="formatDatetime(post.first_publication_date)"
-          >{{ formatDate(post.first_publication_date) }}</time
-        >
+        <div v-if="config.linkDates">
+          <NuxtLink :to="post.url">
+            <time
+              v-if="config.showDates"
+              class="date"
+              :datetime="formatDatetime(post.first_publication_date)"
+              >{{ formatDate(post.first_publication_date) }}</time
+            >
+          </NuxtLink>
+        </div>
         <slice-zone :type="post.type" :uid="post.uid" />
+        <Tags
+          :tagType="config.tagType"
+          :tagGroup="config.tagGroup"
+          :post="post"
+        />
       </article>
     </div>
   </div>
@@ -15,16 +25,20 @@
 
 <script>
 import SliceZone from "vue-slicezone";
+import Tags from "./components/Tags";
+import config from "~/nuxt.config.js";
 
 export default {
   name: "PostFeed",
   data() {
     return {
-      posts: []
+      posts: [],
+      config: config.samsSlices
     };
   },
   components: {
-    SliceZone
+    SliceZone,
+    Tags
   },
   props: {
     slice: {
@@ -41,7 +55,11 @@ export default {
       customTypeId &&
       this.$prismic.predicates.at("document.type", customTypeId);
     const response = await this.$prismic.api.query(queryParam, {
-      orderings: "[document.first_publication_date desc]"
+      orderings: "[document.first_publication_date desc]",
+      fetchLinks: [
+        `${this.config.tagType}.display_name`,
+        `${this.config.tagType}.emoji`
+      ]
     });
     // Guard against feedback loops
     this.posts = response.results.filter(post => {

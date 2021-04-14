@@ -14,25 +14,25 @@ export default {
     title: "slice-library-starter-nuxt",
     meta: [
       {
-        charset: "utf-8",
+        charset: "utf-8"
       },
       {
         name: "viewport",
-        content: "width=device-width, initial-scale=1",
+        content: "width=device-width, initial-scale=1"
       },
       {
         hid: "description",
         name: "description",
-        content: "",
-      },
+        content: ""
+      }
     ],
     link: [
       {
         rel: "icon",
         type: "image/x-icon",
-        href: "/favicon.ico",
-      },
-    ],
+        href: "/favicon.ico"
+      }
+    ]
   },
   // Global CSS (https://go.nuxtjs.dev/config-css)
   css: ["~/assets/reset.css"],
@@ -52,23 +52,29 @@ export default {
           routes: [
             {
               type: "page",
-              path: "/:uid",
-            },
-          ],
-        },
-      },
+              path: "/:uid"
+            }
+          ]
+        }
+      }
     ],
-    ["nuxt-sm"],
+    ["nuxt-sm"]
   ],
   generate: {
-    fallback: true,
+    fallback: true
   },
   // Build Configuration (https://go.nuxtjs.dev/config-build)
   build: {
-    transpile: ["vue-slicezone", "nuxt-sm"],
+    transpile: ["vue-slicezone", "nuxt-sm"]
   },
   storybook: {
-    stories: ["~/slices/**/*.stories.js"],
+    stories: ["~/slices/**/*.stories.js"]
   },
   ignore: ["**/*.stories.js"],
+  samsSlices: {
+    tagType: "tag",
+    tagGroup: "tags",
+    showDates: true,
+    linkDates: true
+  }
 };
